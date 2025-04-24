@@ -51,6 +51,7 @@ export interface CoatOfArms {
 }
 
 export interface Currencies {
+    code: string;
     EUR: Eur;
 }
 

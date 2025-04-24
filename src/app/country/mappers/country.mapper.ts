@@ -36,7 +36,7 @@ export class CountryMapper {
 
             region: restCountry.region,
             subregion: restCountry.subregion,
-            borders: restCountry.borders.join(', '),
+            borders: restCountry.borders?.join( ', ' ),
             currency: currencyCode,
             currencySymbol: currencySymbol,
         }

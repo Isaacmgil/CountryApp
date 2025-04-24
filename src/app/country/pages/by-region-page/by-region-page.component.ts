@@ -29,7 +29,6 @@ export class ByRegionPageComponent {
   countryResource = rxResource({
     request: () => ({ region: this.selectedRegion() }),
     loader: ({request}) => {
-      console.log('Loading countries by region', request);
 
       if( !request.region) return of([]);
 

@@ -11,4 +11,5 @@ export interface Country {
     borders: string;
     currency: string;
     currencySymbol: string;
+    languages: string;
 }

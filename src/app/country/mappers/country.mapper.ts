@@ -8,11 +8,6 @@ export class CountryMapper {
 
     static mapRestCountryToCountry (restCountry: RESTCountry): Country {
 
-        let languageCodes: string = '';
-        if (restCountry.languages) {
-            languageCodes = Object.keys(restCountry.languages).join(',');
-        }
-
         let currencySymbol: string = '';
         if (restCountry.currencies) {
             const currencyValues = Object.values(restCountry.currencies);
@@ -38,6 +33,7 @@ export class CountryMapper {
             subregion: restCountry.subregion,
             borders: restCountry.borders?.join( ', ' ),
             currency: currencyCode,
+            languages: restCountry.languages ? Object.keys(restCountry.languages).join(', ') : 'No tiene idioma',
             currencySymbol: currencySymbol,
         }
     }
